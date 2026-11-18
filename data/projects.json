@@ -6,7 +6,7 @@
     "description": "A console task manager to add, edit, complete and delete tasks. Tasks are saved in a JSON file so they persist between runs.",
     "tech_stack": ["Python", "JSON"],
     "my_part": "Built the whole app, including file handling.",
-    "github_url": "https://github.com/Kadhiravan06/placeholder-todo-app",
+    "github_url": "https://github.com/Kadhiravan06/CODSOFT/blob/main/Task1",
     "demo_url": "",
     "featured": true,
     "sort_order": 1
@@ -18,7 +18,7 @@
     "description": "A console calculator for basic arithmetic with input validation and division-by-zero handling.",
     "tech_stack": ["Python"],
     "my_part": "Built the whole app.",
-    "github_url": "https://github.com/Kadhiravan06/placeholder-calculator",
+    "github_url": "https://github.com/Kadhiravan06/CODSOFT/blob/main/Task2",
     "demo_url": "",
     "featured": true,
     "sort_order": 2
@@ -30,7 +30,7 @@
     "description": "A game played against the computer with winner logic, score tracking and multiple rounds.",
     "tech_stack": ["Python"],
     "my_part": "Built the whole app, including game logic and input handling.",
-    "github_url": "https://github.com/Kadhiravan06/placeholder-rps-game",
+    "github_url": "https://github.com/Kadhiravan06/CODSOFT/blob/main/Task3",
     "demo_url": "",
     "featured": true,
     "sort_order": 3
