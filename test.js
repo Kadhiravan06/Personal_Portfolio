@@ -1,10 +1,12 @@
 process.env.NODE_ENV = 'test';
 process.env.SQLITE_DB_PATH = 'test_portfolio.db';
+delete process.env.MONGODB_URI;
 
 const assert = require('assert');
 const fs = require('fs');
 const http = require('http');
 const app = require('./server');
+process.env.MONGODB_URI = '';
 const { initDb, seedDatabase } = require('./src/db');
 const { DatabaseSync } = require('node:sqlite');
 

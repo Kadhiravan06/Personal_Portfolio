@@ -3,7 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const { DatabaseSync } = require('node:sqlite');
 
-const isMongo = Boolean(process.env.MONGODB_URI);
+const isMongo = () => Boolean(process.env.MONGODB_URI);
 
 let sqliteDb = null;
 
@@ -94,7 +94,7 @@ function getSqliteDb() {
 }
 
 async function initDb() {
-  if (isMongo) {
+  if (isMongo()) {
     if (mongoose.connection.readyState === 0) {
       await mongoose.connect(process.env.MONGODB_URI);
     }
@@ -105,7 +105,7 @@ async function initDb() {
 
 async function getProjects() {
   await initDb();
-  if (isMongo) {
+  if (isMongo()) {
     return await ProjectModel.find().sort({ sort_order: 1 }).lean();
   }
   const db = getSqliteDb();
@@ -119,7 +119,7 @@ async function getProjects() {
 
 async function getSkills() {
   await initDb();
-  if (isMongo) {
+  if (isMongo()) {
     return await SkillModel.find().sort({ id: 1 }).lean();
   }
   const db = getSqliteDb();
@@ -128,7 +128,7 @@ async function getSkills() {
 
 async function getCertifications() {
   await initDb();
-  if (isMongo) {
+  if (isMongo()) {
     return await CertificationModel.find().sort({ id: 1 }).lean();
   }
   const db = getSqliteDb();
@@ -137,7 +137,7 @@ async function getCertifications() {
 
 async function saveMessage({ name, email, message }) {
   await initDb();
-  if (isMongo) {
+  if (isMongo()) {
     const doc = await MessageModel.create({ name, email, message });
     return doc.toObject();
   }
@@ -150,7 +150,7 @@ async function saveMessage({ name, email, message }) {
 
 async function seedDatabase({ projects, skills, certifications }) {
   await initDb();
-  if (isMongo) {
+  if (isMongo()) {
     await ProjectModel.deleteMany({});
     await SkillModel.deleteMany({});
     await CertificationModel.deleteMany({});
