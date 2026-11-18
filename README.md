@@ -6,7 +6,7 @@ A full-stack personal portfolio website built as Task 1 of the Full Stack Develo
 
 ## 🔗 Project Links
 
-- **Live URL:** [Deploy to Render/Vercel and paste your live URL here]
+- **Live URL:** [https://personal-portfolio-i2nl.onrender.com/](https://personal-portfolio-i2nl.onrender.com/)
 - **GitHub Repository:** [https://github.com/Kadhiravan06/Personal_Portfolio](https://github.com/Kadhiravan06/Personal_Portfolio)
 
 ---
