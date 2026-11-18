@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Java Training",
+    "issuer": "EduPyramids, SINE, IIT Bombay (Spoken Tutorial)",
+    "issued_on": "3 Feb 2026",
+    "type": "certificate",
+    "details": "Online exam score 92.5%, 4 credits.",
+    "verify_url": "#placeholder-verify-java"
+  },
+  {
+    "id": 2,
+    "title": "Python Programming Internship",
+    "issuer": "CodSoft",
+    "issued_on": "13 Aug 2025",
+    "type": "certificate",
+    "details": "Four-week virtual internship, 10 Jul to 10 Aug 2025.",
+    "verify_url": "#placeholder-verify-codsoft"
+  },
+  {
+    "id": 3,
+    "title": "Kickstart Your Programming Career with C",
+    "issuer": "Simplilearn SkillUp",
+    "issued_on": "Date to add",
+    "type": "certificate",
+    "details": "Foundational programming course in C covering syntax, algorithms, and logic.",
+    "verify_url": "#placeholder-verify-c"
+  },
+  {
+    "id": 4,
+    "title": "Introduction to AI",
+    "issuer": "Infosys",
+    "issued_on": "Date to add",
+    "type": "certificate",
+    "details": "Foundations of Artificial Intelligence concepts and applications.",
+    "verify_url": "#placeholder-verify-ai"
+  },
+  {
+    "id": 5,
+    "title": "MongoDB Basics for Students",
+    "issuer": "MongoDB",
+    "issued_on": "Date to add",
+    "type": "certificate",
+    "details": "Document database fundamentals, collections, CRUD operations, and queries.",
+    "verify_url": "#placeholder-verify-mongodb"
+  },
+  {
+    "id": 6,
+    "title": "INNOCLASH'26",
+    "issuer": "Dept. of CSE, Rajalakshmi Institute of Technology, with iDatamind, UAE",
+    "issued_on": "4–5 Feb 2026",
+    "type": "hackathon",
+    "details": "24-hour SDG-aligned international hybrid hackathon. Participant.",
+    "verify_url": "#placeholder-innoclash26"
+  },
+  {
+    "id": 7,
+    "title": "Prompt to Page Hackathon",
+    "issuer": "TechSpark Club, Rajalakshmi Institute of Technology",
+    "issued_on": "31 Jan 2026",
+    "type": "hackathon",
+    "details": "Participant. Certificate ID TECH2025-0986.",
+    "verify_url": "https://lnkd.in/gXRxB_vA"
+  },
+  {
+    "id": 8,
+    "title": "Advanced Image Analysis for Geospatial Professionals",
+    "issuer": "Indian Institute of Remote Sensing (IIRS), ISRO",
+    "issued_on": "22 Aug 2025",
+    "type": "workshop",
+    "details": "One-day online workshop on geospatial image analysis.",
+    "verify_url": "https://certificate.iirs.gov.in"
+  }
+]

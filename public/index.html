@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kadhiravan K | Full Stack Developer &amp; CSE Student</title>
+  <meta name="description" content="Portfolio of Kadhiravan K - Computer Science and Engineering student at Rajalakshmi Institute of Technology, Full Stack Developer, Python &amp; Java enthusiast.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#home" class="logo">
+        <span class="logo-accent">&lt;</span>Kadhiravan<span class="logo-accent">/&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link nav-link-highlight">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle light/dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="mobile-toggle" class="btn-icon mobile-toggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for internships
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Kadhiravan</span>.
+          </h1>
+          <p class="hero-lead">I build web apps and learn by shipping projects.</p>
+          <p class="hero-headline">
+            Computer Science and Engineering student | Full Stack · Java · Python · AI/ML
+          </p>
+
+          <div class="hero-meta">
+            <span class="meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Chennai, Tamil Nadu, India
+            </span>
+            <span class="meta-tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              Rajalakshmi Institute of Technology
+            </span>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              View my projects
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="Kadhiravan_K_Resume_Professional.pdf" download class="btn btn-secondary">
+              Download resume
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              Contact me
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/Kadhiravan06" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/kadhiravan-k-31b79632b/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="mailto:kadhiravankalamegam2006@gmail.com" class="social-icon" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Background, education, and current focus</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card card">
+            <h3 class="card-title">Overview</h3>
+            <p class="bio-short">
+              I'm a third-year Computer Science and Engineering student at Rajalakshmi Institute of Technology, Chennai. I enjoy building web apps, and I'm learning full stack development alongside Java, Python and AI/ML. I'm looking for internships where I can work on real projects.
+            </p>
+            <div class="bio-divider"></div>
+            <p class="bio-long">
+              I'm Kadhiravan K, a third-year B.E. Computer Science and Engineering student at Rajalakshmi Institute of Technology in Chennai, with a CGPA of 7.47/10. I enjoy creating web applications and I'm focused on full stack development, with a growing interest in AI, machine learning, data science and data analytics.
+            </p>
+            <p class="bio-long">
+              In July and August 2025 I completed a four-week Python programming internship at CodSoft, where I built a to-do list app, a calculator and a Rock-Paper-Scissors game. I have also taken part in hackathons, finished Java training from IIT Bombay with a score of 92.5%, and attended an ISRO workshop on geospatial image analysis.
+            </p>
+            <p class="bio-long">
+              I'm currently doing a Full Stack Development internship at Thiranex EduTech, and this portfolio is my first task there.
+            </p>
+
+            <div class="open-to-box">
+              <span class="open-to-label">Open to:</span>
+              <p class="open-to-text">Internships in full stack development, AI/ML, data science, data analytics, Java and Python.</p>
+            </div>
+          </div>
+
+          <div class="about-side">
+            <div class="card stat-card">
+              <div class="stat-icon">🎓</div>
+              <div class="stat-body">
+                <span class="stat-number">7.47 / 10</span>
+                <span class="stat-label">CGPA (up to 4th semester)</span>
+                <span class="stat-sub">Rajalakshmi Institute of Technology, Chennai</span>
+              </div>
+            </div>
+
+            <div class="card stat-card">
+              <div class="stat-icon">💼</div>
+              <div class="stat-body">
+                <span class="stat-number">Full Stack Intern</span>
+                <span class="stat-label">Thiranex EduTech LLP</span>
+                <span class="stat-sub">12 Nov 2026 – 11 Dec 2026</span>
+              </div>
+            </div>
+
+            <div class="card stat-card">
+              <div class="stat-icon">🐍</div>
+              <div class="stat-body">
+                <span class="stat-number">Python Intern</span>
+                <span class="stat-label">CodSoft</span>
+                <span class="stat-sub">Completed 4-week virtual internship</span>
+              </div>
+            </div>
+
+            <div class="card stat-card">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-body">
+                <span class="stat-number">92.5%</span>
+                <span class="stat-label">IIT Bombay Java Certification</span>
+                <span class="stat-sub">EduPyramids, SINE, IIT Bombay</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Loaded dynamically from the backend database via REST API</p>
+        </div>
+
+        <div id="skills-container" class="skills-grid">
+          <div class="loading-state">
+            <div class="spinner"></div>
+            <p>Loading skills from database...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">Console applications and web apps loaded from the database</p>
+        </div>
+
+        <div id="projects-container" class="projects-grid">
+          <div class="loading-state">
+            <div class="spinner"></div>
+            <p>Loading projects from database...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Experience</h2>
+          <p class="section-subtitle">Internships and practical engineering work</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Intern, Full Stack Development</h3>
+                  <span class="timeline-company">Thiranex EduTech LLP, Chennai</span>
+                </div>
+                <span class="timeline-badge badge-active">12 Nov 2026 – 11 Dec 2026</span>
+              </div>
+              <div class="timeline-meta">Remote, project-based</div>
+              <ul class="timeline-points">
+                <li>Working on practical full stack projects under industry mentorship, with periodic progress reviews.</li>
+                <li>First task: building this personal portfolio website with a frontend, a backend API and a database, deployed live.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-title">Python Programming Intern</h3>
+                  <span class="timeline-company">CodSoft</span>
+                </div>
+                <span class="timeline-badge">10 Jul 2025 – 10 Aug 2025</span>
+              </div>
+              <div class="timeline-meta">Virtual Internship</div>
+              <ul class="timeline-points">
+                <li>Completed a four-week virtual internship and received a completion certificate.</li>
+                <li>Built three Python applications: a to-do list app that stores tasks in JSON, a console calculator with input validation and error handling, and a Rock-Paper-Scissors game with score tracking.</li>
+                <li>Wrote up each task as a project post on LinkedIn.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Academic record and relevant coursework</p>
+        </div>
+
+        <div class="education-grid">
+          <div class="card education-card">
+            <div class="education-header">
+              <div class="education-icon">🎓</div>
+              <div>
+                <h3 class="education-degree">B.E. Computer Science and Engineering</h3>
+                <span class="education-school">Rajalakshmi Institute of Technology, Chennai</span>
+              </div>
+            </div>
+            <div class="education-meta">
+              <span class="education-year">2024 – 2028 (expected)</span>
+              <span class="education-result highlight-badge">CGPA 7.47 / 10 (up to 4th semester)</span>
+            </div>
+            <div class="coursework-box">
+              <span class="coursework-title">Relevant Coursework:</span>
+              <div class="coursework-tags">
+                <span class="chip">Compiler Design</span>
+                <span class="chip">Operating Systems</span>
+                <span class="chip">DBMS</span>
+                <span class="chip">Machine Learning</span>
+                <span class="chip">Deep Learning</span>
+                <span class="chip">Theory of Computation</span>
+                <span class="chip">Data Warehousing</span>
+                <span class="chip">Algorithms</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card education-card">
+            <div class="education-header">
+              <div class="education-icon">🏫</div>
+              <div>
+                <h3 class="education-degree">Higher Secondary (Class XII)</h3>
+                <span class="education-school">PAK Palanisamy Higher Secondary School, Chennai</span>
+              </div>
+            </div>
+            <div class="education-meta">
+              <span class="education-year">2024</span>
+              <span class="education-result highlight-badge">528 / 600 (88%)</span>
+            </div>
+            <div class="coursework-box">
+              <span class="coursework-title">Key Subject Scores:</span>
+              <div class="coursework-tags">
+                <span class="chip">Computer Science: 98/100</span>
+                <span class="chip">Mathematics: 99/100</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card education-card">
+            <div class="education-header">
+              <div class="education-icon">📚</div>
+              <div>
+                <h3 class="education-degree">Secondary School (Class X)</h3>
+                <span class="education-school">PAK Palanisamy Higher Secondary School, Chennai</span>
+              </div>
+            </div>
+            <div class="education-meta">
+              <span class="education-year">2022</span>
+              <span class="education-result highlight-badge">464 / 500 (92.8%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Certifications &amp; Hackathons</h2>
+          <p class="section-subtitle">Credentials and competitive events loaded from the backend</p>
+        </div>
+
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="certificate">Certifications</button>
+          <button class="filter-btn" data-filter="hackathon">Hackathons</button>
+          <button class="filter-btn" data-filter="workshop">Workshops</button>
+        </div>
+
+        <div id="certifications-container" class="certifications-grid">
+          <div class="loading-state">
+            <div class="spinner"></div>
+            <p>Loading certifications from database...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">Send a message directly to my database or reach out via email</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info card">
+            <h3 class="card-title">Contact Information</h3>
+            <p class="contact-lead">
+              I am open to internship opportunities in Full Stack Development, AI/ML, Data Science, and Python/Java engineering.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <a href="mailto:kadhiravankalamegam2006@gmail.com" class="contact-link">
+                    kadhiravankalamegam2006@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Chennai, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-label">GitHub</span>
+                  <a href="https://github.com/Kadhiravan06" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    github.com/Kadhiravan06
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-label">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/kadhiravan-k-31b79632b/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    linkedin.com/in/kadhiravan-k-31b79632b
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container card">
+            <h3 class="card-title">Send a Message</h3>
+            <p class="form-instruction">Fill out the form below to save your message directly into the backend database.</p>
+
+            <div id="form-alert" class="alert hidden" role="alert"></div>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Smith" required minlength="2">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. alex@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Write your message here..." required minlength="5"></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-spinner hidden"></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-accent">&lt;</span>Kadhiravan<span class="logo-accent">/&gt;</span>
+        </a>
+        <p class="footer-tagline">Built for Thiranex EduTech Full Stack Internship Task 1.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/Kadhiravan06" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/kadhiravan-k-31b79632b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:kadhiravankalamegam2006@gmail.com">Email</a>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; 2026 Kadhiravan K. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

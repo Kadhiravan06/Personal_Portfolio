@@ -1,0 +1,6 @@
+node_modules/
+.env
+*.db
+test_portfolio.db
+.DS_Store
+npm-debug.log*
