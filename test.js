@@ -53,8 +53,8 @@ async function runTests() {
     const projRes = await fetch(`${baseUrl}/api/projects`);
     const projJson = await projRes.json();
     assert.strictEqual(projRes.status, 200);
-    assert.strictEqual(projJson.length, 3);
-    assert.strictEqual(projJson[0].title, 'To-Do List App (CodSoft Task 1)');
+    assert.strictEqual(projJson.length, 4);
+    assert.strictEqual(projJson[0].title, 'The Margin');
     assert(Array.isArray(projJson[0].tech_stack));
 
     const skillRes = await fetch(`${baseUrl}/api/skills`);
