@@ -45,6 +45,12 @@ async function runTests() {
     assert.strictEqual(jsRes.status, 200);
     assert(jsText.includes('loadProjects'));
 
+    const animeRes = await fetch(`${baseUrl}/vendor/anime.esm.min.js`);
+    const animeText = await animeRes.text();
+    assert.strictEqual(animeRes.status, 200);
+    assert(animeText.includes('Anime.js'));
+    assert(animeText.length > 10000);
+
     const pdfRes = await fetch(`${baseUrl}/Kadhiravan_K_Resume_Professional.pdf`);
     const pdfBuf = await pdfRes.arrayBuffer();
     assert.strictEqual(pdfRes.status, 200);
