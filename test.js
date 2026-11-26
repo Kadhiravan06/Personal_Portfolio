@@ -34,6 +34,10 @@ async function runTests() {
     assert.strictEqual(htmlRes.status, 200);
     assert(htmlText.includes('Kadhiravan K'));
     assert(htmlText.includes('View my projects'));
+    assert(htmlText.includes('id="starfield"'));
+    assert(htmlText.includes('id="intro-overlay"'));
+    assert(htmlText.includes('SCENARIO 00'));
+    assert(htmlText.includes('class="skip-link"'));
 
     const cssRes = await fetch(`${baseUrl}/css/style.css`);
     const cssText = await cssRes.text();
