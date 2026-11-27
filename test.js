@@ -43,6 +43,9 @@ async function runTests() {
     const cssText = await cssRes.text();
     assert.strictEqual(cssRes.status, 200);
     assert(cssText.includes('--accent-primary'));
+    assert(cssText.includes('--accent-gold'));
+    assert(cssText.includes('[data-theme="light"]'));
+    assert(cssText.includes('prefers-reduced-motion'));
 
     const jsRes = await fetch(`${baseUrl}/js/app.js`);
     const jsText = await jsRes.text();
