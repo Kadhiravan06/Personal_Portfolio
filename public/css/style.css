@@ -1009,14 +1009,19 @@ main,
 }
 
 .skill-chip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
+  display: grid;
+  gap: 4px;
   padding: 7px 10px;
   background: var(--bg-input);
   border: 1px solid transparent;
   transition: border-color 0.2s, background 0.2s;
+}
+
+.skill-chip-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .skill-chip:hover {

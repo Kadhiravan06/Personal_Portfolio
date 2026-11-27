@@ -51,6 +51,8 @@ async function runTests() {
     const jsText = await jsRes.text();
     assert.strictEqual(jsRes.status, 200);
     assert(jsText.includes('loadProjects'));
+    assert(jsText.includes('portfolio:rendered'));
+    assert(jsText.includes('portfolio:contact-success'));
 
     const animeRes = await fetch(`${baseUrl}/vendor/anime.esm.min.js`);
     const animeText = await animeRes.text();

@@ -32,13 +32,18 @@ function initMobileNav() {
   const navLinks = document.querySelectorAll('.nav-link');
 
   if (mobileToggle && navMenu) {
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileToggle.setAttribute('aria-controls', 'nav-menu');
+
     mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
+      const open = navMenu.classList.toggle('active');
+      mobileToggle.setAttribute('aria-expanded', String(open));
     });
 
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -73,8 +78,13 @@ async function loadSkills() {
         const chip = document.createElement('div');
         chip.className = 'skill-chip';
         chip.innerHTML = `
-          <span class="skill-name">${escapeHtml(skill.name)}</span>
-          <span class="skill-level-label">${escapeHtml(skill.level)}</span>
+          <div class="skill-chip-head">
+            <span class="skill-name">${escapeHtml(skill.name)}</span>
+            <span class="skill-level-label">${escapeHtml(skill.level)}</span>
+          </div>
+          <span class="probability-bar" aria-hidden="true">
+            <span style="--probability: ${levelToProbability(skill.level)}%"></span>
+          </span>
         `;
         chipsBox.appendChild(chip);
       });
@@ -83,6 +93,8 @@ async function loadSkills() {
       card.appendChild(chipsBox);
       container.appendChild(card);
     }
+
+    announceRendered('skills');
   } catch (err) {
     container.innerHTML = `
       <div class="loading-state">
@@ -105,7 +117,8 @@ async function loadProjects() {
 
     projects.forEach((p) => {
       const card = document.createElement('div');
-      card.className = 'project-card';
+      const rarity = ['common', 'rare', 'epic', 'legendary'][(p.id - 1) % 4];
+      card.className = `project-card rarity-${rarity}`;
 
       const techBadges = (Array.isArray(p.tech_stack) ? p.tech_stack : [])
         .map((t) => `<span class="tag">${escapeHtml(t)}</span>`)
@@ -151,11 +164,13 @@ async function loadProjects() {
     const upcomingCard = document.createElement('div');
     upcomingCard.className = 'project-card project-upcoming';
     upcomingCard.innerHTML = `
-      <div class="upcoming-icon">🚀</div>
+      <div class="upcoming-icon" aria-hidden="true">🚀</div>
       <h3 class="upcoming-title">More projects coming soon</h3>
       <p class="upcoming-desc">Currently adding weekly projects from the Thiranex Full Stack Development internship.</p>
     `;
     container.appendChild(upcomingCard);
+
+    announceRendered('projects');
   } catch (err) {
     container.innerHTML = `
       <div class="loading-state">
@@ -241,6 +256,8 @@ function renderCertifications(certs) {
 
     container.appendChild(card);
   });
+
+  announceRendered('certifications');
 }
 
 function setupCertificationFilters() {
@@ -314,6 +331,7 @@ function initContactForm() {
 
       showAlert(data.message || 'Thank you! Your message has been saved to the database.', 'success');
       form.reset();
+      document.dispatchEvent(new CustomEvent('portfolio:contact-success'));
     } catch (err) {
       showAlert(err.message || 'Error submitting message. Please try again.', 'error');
     } finally {
@@ -340,26 +358,49 @@ function initContactForm() {
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
+  const hudSection = document.getElementById('hud-section');
 
-  window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollPosition = window.pageYOffset + 120;
+  if (!sections.length || !('IntersectionObserver' in window)) return;
 
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-        current = section.getAttribute('id');
-      }
-    });
-
+  const setCurrent = (id) => {
     navLinks.forEach((link) => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
+      const isActive = link.getAttribute('href') === `#${id}`;
+      link.classList.toggle('active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
       }
     });
-  });
+
+    const section = document.getElementById(id);
+    const label = section?.querySelector('.scenario-label')?.textContent.replace(/\s+/g, ' ').trim();
+    if (hudSection && label) {
+      hudSection.textContent = label.replace('■', '').trim();
+    }
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) setCurrent(entry.target.id);
+    });
+  }, { rootMargin: '-42% 0px -52% 0px', threshold: 0 });
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+function levelToProbability(level) {
+  if (!level) return 50;
+  if (/hackathon/i.test(level)) return 82;
+  if (/working knowledge/i.test(level)) return 72;
+  if (/basics/i.test(level)) return 55;
+  if (/beginner to/i.test(level)) return 58;
+  if (/beginner/i.test(level)) return 45;
+  return 60;
+}
+
+function announceRendered(type) {
+  document.dispatchEvent(new CustomEvent('portfolio:rendered', { detail: { type } }));
 }
 
 function escapeHtml(str) {
