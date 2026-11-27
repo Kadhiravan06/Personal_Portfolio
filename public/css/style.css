@@ -1024,9 +1024,14 @@ main,
 
 .skill-chip-head {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 2px 10px;
+}
+
+.skill-level-label {
+  margin-left: auto;
 }
 
 .skill-chip:hover {
