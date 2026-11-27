@@ -25,6 +25,14 @@ const session = {
 
 const modulo = (value, max) => ((value % max) + max) % max;
 
+const clearMotionStyles = (targets) => {
+  const elements = typeof targets === 'string' ? selectAll(targets) : targets;
+  elements.forEach((element) => {
+    element.style.opacity = '';
+    element.style.transform = '';
+  });
+};
+
 let wipeBusy = false;
 
 function playWipe(onCovered) {
@@ -210,6 +218,7 @@ function initReveals() {
       duration: 650,
       delay: stagger(70),
       ease: 'outExpo',
+      onComplete: () => clearMotionStyles(targets),
     });
     targets.forEach((target) => target.classList.add('is-revealed'));
   };
@@ -287,33 +296,60 @@ function initRenderHooks() {
           duration: 480,
           delay: stagger(20),
           ease: 'outQuad',
+          onComplete: () => clearMotionStyles(chips),
         });
       }
-      window.setTimeout(() => {
-        chips.forEach((chip) => chip.classList.add('is-charged'));
-      }, reduced() ? 0 : 240);
+      chargeSkills(chips);
     }
 
     if (type === 'projects' && !reduced()) {
-      animate('.project-card', {
+      const cards = selectAll('.project-card');
+      animate(cards, {
         opacity: [0, 1],
         y: [20, 0],
         duration: 520,
         delay: stagger(50),
         ease: 'outQuad',
+        onComplete: () => clearMotionStyles(cards),
       });
     }
 
     if (type === 'certifications' && !reduced()) {
-      animate('.cert-card', {
+      const cards = selectAll('.cert-card');
+      animate(cards, {
         opacity: [0, 1],
         y: [16, 0],
         duration: 460,
         delay: stagger(40),
         ease: 'outQuad',
+        onComplete: () => clearMotionStyles(cards),
       });
     }
   });
+}
+
+function chargeSkills(chips) {
+  if (!chips.length) return;
+
+  const charge = () => {
+    chips.forEach((chip, index) => {
+      window.setTimeout(() => chip.classList.add('is-charged'), reduced() ? 0 : index * 35);
+    });
+  };
+
+  const container = document.getElementById('skills-container');
+  if (reduced() || !container || !('IntersectionObserver' in window)) {
+    charge();
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    if (!entries.some((entry) => entry.isIntersecting)) return;
+    observer.disconnect();
+    charge();
+  }, { threshold: 0.15 });
+
+  observer.observe(container);
 }
 
 function initContactStamp() {

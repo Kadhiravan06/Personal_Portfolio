@@ -762,6 +762,11 @@ main,
   transform: translateY(-2px);
 }
 
+.btn:active {
+  transform: translateY(0) scale(0.97);
+  transition-duration: 0.08s;
+}
+
 .btn-primary {
   color: #041018;
   background: var(--accent-primary);
@@ -1084,7 +1089,7 @@ main,
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-left: 3px solid var(--rarity, var(--border-strong));
-  transition: border-color 0.25s, background 0.25s, transform 0.25s var(--ease-out);
+  transition: border-color 0.25s, background 0.25s, transform 0.25s var(--ease-out), box-shadow 0.25s;
 }
 
 .project-card::after {
@@ -1103,6 +1108,7 @@ main,
 .project-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--rarity, var(--border-strong));
+  box-shadow: 0 18px 42px -26px var(--rarity, var(--border-strong));
   transform: translateY(-3px);
 }
 
@@ -1876,7 +1882,8 @@ main,
   .project-card::after,
   .btn,
   .card,
-  .nav-menu {
+  .nav-menu,
+  .probability-bar > span {
     transition: none;
   }
 
