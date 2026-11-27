@@ -202,7 +202,10 @@ function initIntro(onDone) {
   timer = window.setTimeout(dismiss, 2400);
 }
 
+let revealsReady = false;
+
 function initReveals() {
+  revealsReady = true;
   const items = selectAll('[data-reveal]:not(.is-revealed)');
   if (!items.length) return;
 
@@ -375,6 +378,13 @@ function initContactStamp() {
 function boot() {
   if (!reduced()) {
     document.documentElement.classList.add('js-motion');
+
+    // If the reveal module never starts, never leave the page hidden.
+    window.setTimeout(() => {
+      if (!revealsReady) {
+        selectAll('[data-reveal]').forEach((element) => element.classList.add('is-revealed'));
+      }
+    }, 4000);
   }
 
   initStarfield();
