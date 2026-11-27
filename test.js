@@ -60,6 +60,12 @@ async function runTests() {
     assert(animeText.includes('Anime.js'));
     assert(animeText.length > 10000);
 
+    const animRes = await fetch(`${baseUrl}/js/animations.js`);
+    const animText = await animRes.text();
+    assert.strictEqual(animRes.status, 200);
+    assert(animText.includes('prefers-reduced-motion'));
+    assert(animText.includes('createTimeline'));
+
     const pdfRes = await fetch(`${baseUrl}/Kadhiravan_K_Resume_Professional.pdf`);
     const pdfBuf = await pdfRes.arrayBuffer();
     assert.strictEqual(pdfRes.status, 200);
